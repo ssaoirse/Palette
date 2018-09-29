@@ -8,15 +8,6 @@
 
 import Foundation
 
-struct ServiceResponse: Decodable {
-    let response: JSONDictionary
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        response = try container.decode(JSONDictionary.self)
-    }
-}
-
-
 /// Login Response Model
 struct LoginResponseModel: Decodable {
     let token: String
