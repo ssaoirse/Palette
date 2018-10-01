@@ -16,8 +16,6 @@
 		04F36488215FB1E4007A8D9A /* LoginInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F36487215FB1E4007A8D9A /* LoginInterfaces.swift */; };
 		04F3648C215FB33B007A8D9A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3648B215FB33B007A8D9A /* Constants.swift */; };
 		04F3648E215FB555007A8D9A /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3648D215FB555007A8D9A /* LoginInteractor.swift */; };
-		04F36491215FB5C3007A8D9A /* HTTPServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F36490215FB5C3007A8D9A /* HTTPServiceInterface.swift */; };
-		04F36493215FB68F007A8D9A /* HTTPServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F36492215FB68F007A8D9A /* HTTPServiceProvider.swift */; };
 		04F36498215FB7AA007A8D9A /* WebServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F36497215FB7AA007A8D9A /* WebServiceInterface.swift */; };
 		04F3649B215FB817007A8D9A /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3649A215FB817007A8D9A /* ServiceRequest.swift */; };
 		04F3649D215FB8A3007A8D9A /* WebServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3649C215FB8A3007A8D9A /* WebServiceProvider.swift */; };
@@ -37,8 +35,6 @@
 		04F36487215FB1E4007A8D9A /* LoginInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInterfaces.swift; sourceTree = "<group>"; };
 		04F3648B215FB33B007A8D9A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04F3648D215FB555007A8D9A /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
-		04F36490215FB5C3007A8D9A /* HTTPServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServiceInterface.swift; sourceTree = "<group>"; };
-		04F36492215FB68F007A8D9A /* HTTPServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServiceProvider.swift; sourceTree = "<group>"; };
 		04F36497215FB7AA007A8D9A /* WebServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceInterface.swift; sourceTree = "<group>"; };
 		04F3649A215FB817007A8D9A /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		04F3649C215FB8A3007A8D9A /* WebServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceProvider.swift; sourceTree = "<group>"; };
@@ -129,18 +125,8 @@
 			children = (
 				04F36499215FB805007A8D9A /* ServiceRequest */,
 				04F36496215FB795007A8D9A /* WebService */,
-				04F36494215FB750007A8D9A /* HTTPService */,
 			);
 			path = ServiceProviders;
-			sourceTree = "<group>";
-		};
-		04F36494215FB750007A8D9A /* HTTPService */ = {
-			isa = PBXGroup;
-			children = (
-				04F36490215FB5C3007A8D9A /* HTTPServiceInterface.swift */,
-				04F36492215FB68F007A8D9A /* HTTPServiceProvider.swift */,
-			);
-			path = HTTPService;
 			sourceTree = "<group>";
 		};
 		04F36496215FB795007A8D9A /* WebService */ = {
@@ -233,11 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04F36493215FB68F007A8D9A /* HTTPServiceProvider.swift in Sources */,
 				04F36474215FB134007A8D9A /* ViewController.swift in Sources */,
 				04F36488215FB1E4007A8D9A /* LoginInterfaces.swift in Sources */,
 				04F364A1215FCB6A007A8D9A /* LoginResponseModel.swift in Sources */,
-				04F36491215FB5C3007A8D9A /* HTTPServiceInterface.swift in Sources */,
 				04F3649D215FB8A3007A8D9A /* WebServiceProvider.swift in Sources */,
 				04F36498215FB7AA007A8D9A /* WebServiceInterface.swift in Sources */,
 				04F3649B215FB817007A8D9A /* ServiceRequest.swift in Sources */,

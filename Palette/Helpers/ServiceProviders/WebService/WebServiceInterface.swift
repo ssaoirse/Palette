@@ -8,11 +8,30 @@
 
 import Foundation
 
+// MARK:- HTTP methods -
+public enum HTTPMethod: String {
+    case get    = "GET"
+    case post   = "POST"
+    case put    = "PUT"
+    case delete = "DELETE"
+    case head   = "HEAD"
+    
+    /// Methods which support BODY.
+    var acceptsBody: Bool {
+        switch self {
+        case .post, .put:
+            return true
+        default:
+            return false
+        }
+    }
+}
+
 /// MARK:- WebService Result -
 /// The Result type:
 public enum ServiceResult<T> {
     case success(T)
-    case failure(String)
+    case failure(Error)
 }
 public typealias WebServiceResult = (ServiceResult<Data>) -> Void
 

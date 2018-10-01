@@ -42,17 +42,40 @@ class WebServiceProvider: WebServiceInterface {
         }
         
         // Initiate http request.
-        let serviceProvider = HTTPServiceProvider(urlSession: self.urlSession)
-        serviceProvider.performService(withRequest: request) { (result) in
-            switch result {
-            case .success(let data):
-                completion(.success(data))
-                return
-            case .failure(let error):
-                completion(.failure(error.localizedDescription))
+        urlSession.dataTask(with: request) { (data, response, error) in
+            // Handle error.
+            if let error = error {
+                completion(.failure(error))
                 return
             }
-        }
+            
+            // Validate HTTP Status code.
+            guard let httpResponse = response as? HTTPURLResponse else {
+                let err = NSError(domain: "com.gaiainc.Palette",
+                                  code: -1000,
+                                  userInfo: [NSLocalizedDescriptionKey: "Invalid HTTP response."])
+                completion(.failure(err))
+                return
+            }
+            
+            // Check if HTTP response is valid.
+            if let httpError = self.getHTTPServiceError(fromResponse: httpResponse) {
+                completion(.failure(httpError))
+                return
+            }
+            
+            // Validate Data.
+            guard let data = data else {
+                completion(.failure(NSError(domain: "com.gaiainc.Palette",
+                                            code: -1001,
+                                            userInfo: [NSLocalizedDescriptionKey: "Invalid HTTP response data."])))
+                return
+            }
+            
+            // notify success.
+            completion(.success(data))
+            return
+        }.resume()
     }
     
     /*!
@@ -98,6 +121,21 @@ class WebServiceProvider: WebServiceInterface {
             let body = try? JSONSerialization.data(withJSONObject: parameters, options: []) {
             request.httpBody = body
         }
+    }
+    
+    /// Parses the HTTP response and gets the status code and error.
+    fileprivate func getHTTPServiceError(fromResponse response: HTTPURLResponse) -> Error? {
+        var error: Error?
+        switch response.statusCode {
+        case 200...299:
+            error = nil
+        default:
+            let errorDescription = HTTPURLResponse.localizedString(forStatusCode: response.statusCode)
+            error = NSError(domain: "com.gaiainc.Palette",
+                            code: response.statusCode,
+                            userInfo: [NSLocalizedDescriptionKey: errorDescription])
+        }
+        return error
     }
 
 }

@@ -37,8 +37,8 @@ extension LoginInteractor: LoginBusinessLogic {
                     print(error)
                     return
                 }
-            case .failure(let errorMsg):
-                print(errorMsg)
+            case .failure(let error):
+                print(error.localizedDescription)
                 return
             }
         }
