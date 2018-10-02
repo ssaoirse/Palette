@@ -25,6 +25,10 @@ class LoginInteractor {
 extension LoginInteractor: LoginBusinessLogic {
     
     func login(with userName: String, password: String) {
+        
+        // TODO: Validate username and password.
+        
+        
         let request = LoginServiceRequest.login(username: userName, password: password)
         webServiceProvider.performService(serviceRequest: request) { [weak self] (result) in
             switch result {

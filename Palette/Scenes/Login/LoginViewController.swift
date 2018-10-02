@@ -14,12 +14,18 @@ class LoginViewController: UIViewController, HasDependencies {
     private lazy var loginInteractor: LoginBusinessLogic = LoginInteractor(webServiceProvider: webServiceProvider,
                                                                            loginView: self)
     
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        DispatchQueue.main.async {
-            self.doLogin()
-        }
+        
+        // DEBUG:
+        self.userNameTextField.text = "fstester"
+        self.passwordTextField.text = "FStst313"
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,8 +33,16 @@ class LoginViewController: UIViewController, HasDependencies {
         // Dispose of any resources that can be recreated.
     }
     
-    public func doLogin() {
-        self.loginInteractor.login(with: "fstester", password: "FStst313")
+    @IBAction func onLoginTouchUpInside(_ sender: UIButton) {
+        self.view.endEditing(true)
+        let uname = self.userNameTextField.text ?? ""
+        let passwd = self.passwordTextField.text ?? ""
+        self.loginInteractor.login(with: uname, password: passwd)
+    }
+    
+    @IBAction func onResetTouchUpInside(_ sender: UIButton) {
+        self.userNameTextField.text = ""
+        self.passwordTextField.text = ""
     }
 }
 
