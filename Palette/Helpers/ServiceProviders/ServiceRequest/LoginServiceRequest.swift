@@ -8,10 +8,6 @@
 
 import Foundation
 
-/// Login Service Result
-public typealias LoginServiceResult = (ServiceResult<String>) -> Void
-
-
 // MARK:- Login Service Request -
 public enum LoginServiceRequest {
     case login( username: String, password: String)
@@ -54,7 +50,7 @@ extension LoginServiceRequest: ServiceRequest {
         case .login(let username, let password):
             var dictionary = JSONDictionary()
             dictionary["username"] = username
-            dictionary["password"] = password
+            dictionary["password"] = password 
             return dictionary
         }
     }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0480FD022160F83F0036B685 /* ColorPaletteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480FD012160F83F0036B685 /* ColorPaletteModel.swift */; };
+		0480FD042160F8A80036B685 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480FD032160F8A80036B685 /* Extensions.swift */; };
+		0480FD062160FA1C0036B685 /* ColorPaletterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480FD052160FA1C0036B685 /* ColorPaletterInteractor.swift */; };
+		0480FD082160FBA70036B685 /* ColorPaletteServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480FD072160FBA70036B685 /* ColorPaletteServiceRequest.swift */; };
 		04F36472215FB134007A8D9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F36471215FB134007A8D9A /* AppDelegate.swift */; };
 		04F36474215FB134007A8D9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F36473215FB134007A8D9A /* ViewController.swift */; };
 		04F36477215FB134007A8D9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F36475215FB134007A8D9A /* Main.storyboard */; };
@@ -24,7 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04F3646E215FB134007A8D9A /* Palette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Palette.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0480FD012160F83F0036B685 /* ColorPaletteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteModel.swift; sourceTree = "<group>"; };
+		0480FD032160F8A80036B685 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0480FD052160FA1C0036B685 /* ColorPaletterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletterInteractor.swift; sourceTree = "<group>"; };
+		0480FD072160FBA70036B685 /* ColorPaletteServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteServiceRequest.swift; sourceTree = "<group>"; };
+		04F3646E215FB134007A8D9A /* Color Palette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Palette.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F36471215FB134007A8D9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F36473215FB134007A8D9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04F36476215FB134007A8D9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,7 +72,7 @@
 		04F3646F215FB134007A8D9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04F3646E215FB134007A8D9A /* Palette.app */,
+				04F3646E215FB134007A8D9A /* Color Palette.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				04F36485215FB1CB007A8D9A /* ColorPaletteInterfaces.swift */,
+				0480FD012160F83F0036B685 /* ColorPaletteModel.swift */,
+				0480FD052160FA1C0036B685 /* ColorPaletterInteractor.swift */,
 			);
 			path = ColorPalette;
 			sourceTree = "<group>";
@@ -116,6 +126,7 @@
 			children = (
 				04F3648F215FB58E007A8D9A /* ServiceProviders */,
 				04F3648B215FB33B007A8D9A /* Constants.swift */,
+				0480FD032160F8A80036B685 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -143,6 +154,7 @@
 			children = (
 				04F3649A215FB817007A8D9A /* ServiceRequest.swift */,
 				04F3649E215FC5EF007A8D9A /* LoginServiceRequest.swift */,
+				0480FD072160FBA70036B685 /* ColorPaletteServiceRequest.swift */,
 			);
 			path = ServiceRequest;
 			sourceTree = "<group>";
@@ -164,7 +176,7 @@
 			);
 			name = Palette;
 			productName = Palette;
-			productReference = 04F3646E215FB134007A8D9A /* Palette.app */;
+			productReference = 04F3646E215FB134007A8D9A /* Color Palette.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -221,11 +233,15 @@
 			files = (
 				04F36474215FB134007A8D9A /* ViewController.swift in Sources */,
 				04F36488215FB1E4007A8D9A /* LoginInterfaces.swift in Sources */,
+				0480FD062160FA1C0036B685 /* ColorPaletterInteractor.swift in Sources */,
 				04F364A1215FCB6A007A8D9A /* LoginResponseModel.swift in Sources */,
 				04F3649D215FB8A3007A8D9A /* WebServiceProvider.swift in Sources */,
 				04F36498215FB7AA007A8D9A /* WebServiceInterface.swift in Sources */,
 				04F3649B215FB817007A8D9A /* ServiceRequest.swift in Sources */,
 				04F3648E215FB555007A8D9A /* LoginInteractor.swift in Sources */,
+				0480FD022160F83F0036B685 /* ColorPaletteModel.swift in Sources */,
+				0480FD082160FBA70036B685 /* ColorPaletteServiceRequest.swift in Sources */,
+				0480FD042160F8A80036B685 /* Extensions.swift in Sources */,
 				04F36472215FB134007A8D9A /* AppDelegate.swift in Sources */,
 				04F36486215FB1CB007A8D9A /* ColorPaletteInterfaces.swift in Sources */,
 				04F3648C215FB33B007A8D9A /* Constants.swift in Sources */,
@@ -371,7 +387,7 @@
 				INFOPLIST_FILE = Palette/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gaiainc.Palette;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Color Palette";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -387,7 +403,7 @@
 				INFOPLIST_FILE = Palette/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gaiainc.Palette;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Color Palette";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

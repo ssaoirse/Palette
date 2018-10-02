@@ -6,8 +6,12 @@
 //  Copyright © 2018 Gaia Inc. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class ColorPaletteInterfaces: NSObject {
-
+// Interactor:
+protocol ColorPaletterBusinessLogic {
+    func fetchBackgroundColor()
+    func saveBackgroundColor(_ paletteColor: PaletteColor)
 }
+
+

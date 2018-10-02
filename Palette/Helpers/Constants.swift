@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK:- URLConstants
 struct URLConstants {
     // MARK:- BaseURL -
     static let kServerBaseURL                           = "https://cld8zbgxoc.execute-api.eu-central-1.amazonaws.com"
