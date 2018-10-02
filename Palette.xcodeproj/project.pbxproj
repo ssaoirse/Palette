@@ -12,6 +12,7 @@
 		0480FD062160FA1C0036B685 /* ColorPaletterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480FD052160FA1C0036B685 /* ColorPaletterInteractor.swift */; };
 		0480FD082160FBA70036B685 /* ColorPaletteServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480FD072160FBA70036B685 /* ColorPaletteServiceRequest.swift */; };
 		04E061782163B5D9004F41BD /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E061772163B5D9004F41BD /* DependencyInjection.swift */; };
+		04E0617A2163C9D4004F41BD /* ColorPaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E061792163C9D4004F41BD /* ColorPaletteViewController.swift */; };
 		04F36472215FB134007A8D9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F36471215FB134007A8D9A /* AppDelegate.swift */; };
 		04F36474215FB134007A8D9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F36473215FB134007A8D9A /* LoginViewController.swift */; };
 		04F36477215FB134007A8D9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F36475215FB134007A8D9A /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		0480FD052160FA1C0036B685 /* ColorPaletterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletterInteractor.swift; sourceTree = "<group>"; };
 		0480FD072160FBA70036B685 /* ColorPaletteServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteServiceRequest.swift; sourceTree = "<group>"; };
 		04E061772163B5D9004F41BD /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		04E061792163C9D4004F41BD /* ColorPaletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteViewController.swift; sourceTree = "<group>"; };
 		04F3646E215FB134007A8D9A /* Color Palette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Palette.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F36471215FB134007A8D9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F36473215FB134007A8D9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				04F36485215FB1CB007A8D9A /* ColorPaletteInterfaces.swift */,
 				0480FD012160F83F0036B685 /* ColorPaletteModel.swift */,
 				0480FD052160FA1C0036B685 /* ColorPaletterInteractor.swift */,
+				04E061792163C9D4004F41BD /* ColorPaletteViewController.swift */,
 			);
 			path = ColorPalette;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				04F36488215FB1E4007A8D9A /* LoginInterfaces.swift in Sources */,
 				0480FD062160FA1C0036B685 /* ColorPaletterInteractor.swift in Sources */,
 				04F364A1215FCB6A007A8D9A /* LoginResponseModel.swift in Sources */,
+				04E0617A2163C9D4004F41BD /* ColorPaletteViewController.swift in Sources */,
 				04F3649D215FB8A3007A8D9A /* WebServiceProvider.swift in Sources */,
 				04F36498215FB7AA007A8D9A /* WebServiceInterface.swift in Sources */,
 				04E061782163B5D9004F41BD /* DependencyInjection.swift in Sources */,

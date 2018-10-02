@@ -56,6 +56,12 @@ extension LoginViewController: LoginViewInterface {
     
     func navigateToColorPalette() {
         print("Login Complete")
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC = storyboard.instantiateViewController(withIdentifier: "ColorPaletteViewController") as! ColorPaletteViewController
+            nextVC.title = "Color Palette"
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
 }
 
