@@ -13,14 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    private var colorPaletteInterface: ColorPaletterBusinessLogic? = nil
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        let urlSession = URLSession.shared
-        let webServiceProvider = WebServiceProvider(urlSession: urlSession)
-        let loginInterface = LoginInteractor(webServiceProvider: webServiceProvider)
-        loginInterface.login(with: "fstester", password: "FStst313")
+        configure(dependency: AppDependency())
         
         return true
     }
@@ -47,6 +44,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func testLoginInteractor() {
+        let urlSession = URLSession.shared
+        let webServiceProvider = WebServiceProvider(urlSession: urlSession)
+        let loginInterface = LoginInteractor(webServiceProvider: webServiceProvider)
+        loginInterface.login(with: "fstester", password: "FStst313")
+    }
+    
+    func testColorPaletteInterface() {
+        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1Mzg0NjI1OTUsImp0aSI6IjVkNDM4ZTRiLWJlM2QtNDI0Yy05MWUzLWFkNzhjOWI4NDhlMSIsInN1YiI6ImZzdGVzdGVyIiwiZXhwIjoxNTM4NTQ4OTk1LCJuYmYiOjE1Mzg0NjI1OTV9.YrObPFVl3NyKJBXyeO_CQEuEaY9-BZTQtRef4VBShZs"
 
+        let urlSession = URLSession.shared
+        let requestId = 99
+        let webServiceProvider = WebServiceProvider(urlSession: urlSession)
+        colorPaletteInterface = ColorPaletterInteractor(requestId: requestId,
+                                                        authToken: token,
+                                                        webServiceInterface: webServiceProvider)
+        
+        colorPaletteInterface?.fetchBackgroundColor()
+        
+//        let paletteColor = PaletteColor(id: 1, hexString: "000000")
+//        colorPaletteInterface?.saveBackgroundColor(paletteColor)
+    }
+
+}
+
+// MARK:- Extension.
+extension UIApplicationDelegate {
+    func configure(dependency: Dependency) {
+        DependencyInjector.dependencies = dependency
+    }
 }
 

@@ -11,8 +11,9 @@
 		0480FD042160F8A80036B685 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480FD032160F8A80036B685 /* Extensions.swift */; };
 		0480FD062160FA1C0036B685 /* ColorPaletterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480FD052160FA1C0036B685 /* ColorPaletterInteractor.swift */; };
 		0480FD082160FBA70036B685 /* ColorPaletteServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480FD072160FBA70036B685 /* ColorPaletteServiceRequest.swift */; };
+		04E061782163B5D9004F41BD /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E061772163B5D9004F41BD /* DependencyInjection.swift */; };
 		04F36472215FB134007A8D9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F36471215FB134007A8D9A /* AppDelegate.swift */; };
-		04F36474215FB134007A8D9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F36473215FB134007A8D9A /* ViewController.swift */; };
+		04F36474215FB134007A8D9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F36473215FB134007A8D9A /* LoginViewController.swift */; };
 		04F36477215FB134007A8D9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F36475215FB134007A8D9A /* Main.storyboard */; };
 		04F36479215FB134007A8D9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F36478215FB134007A8D9A /* Assets.xcassets */; };
 		04F3647C215FB134007A8D9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F3647A215FB134007A8D9A /* LaunchScreen.storyboard */; };
@@ -32,9 +33,10 @@
 		0480FD032160F8A80036B685 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0480FD052160FA1C0036B685 /* ColorPaletterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletterInteractor.swift; sourceTree = "<group>"; };
 		0480FD072160FBA70036B685 /* ColorPaletteServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteServiceRequest.swift; sourceTree = "<group>"; };
+		04E061772163B5D9004F41BD /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
 		04F3646E215FB134007A8D9A /* Color Palette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Palette.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F36471215FB134007A8D9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04F36473215FB134007A8D9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04F36473215FB134007A8D9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04F36476215FB134007A8D9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04F36478215FB134007A8D9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F3647B215FB134007A8D9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04E061762163B58B004F41BD /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				04E061772163B5D9004F41BD /* DependencyInjection.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		04F36465215FB134007A8D9A = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +93,6 @@
 				04F3648A215FB327007A8D9A /* Helpers */,
 				04F36489215FB2F3007A8D9A /* Scenes */,
 				04F36471215FB134007A8D9A /* AppDelegate.swift */,
-				04F36473215FB134007A8D9A /* ViewController.swift */,
 				04F36475215FB134007A8D9A /* Main.storyboard */,
 				04F36478215FB134007A8D9A /* Assets.xcassets */,
 				04F3647A215FB134007A8D9A /* LaunchScreen.storyboard */,
@@ -98,6 +107,7 @@
 				04F36487215FB1E4007A8D9A /* LoginInterfaces.swift */,
 				04F3648D215FB555007A8D9A /* LoginInteractor.swift */,
 				04F364A0215FCB6A007A8D9A /* LoginResponseModel.swift */,
+				04F36473215FB134007A8D9A /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -124,6 +134,7 @@
 		04F3648A215FB327007A8D9A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				04E061762163B58B004F41BD /* DI */,
 				04F3648F215FB58E007A8D9A /* ServiceProviders */,
 				04F3648B215FB33B007A8D9A /* Constants.swift */,
 				0480FD032160F8A80036B685 /* Extensions.swift */,
@@ -231,12 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04F36474215FB134007A8D9A /* ViewController.swift in Sources */,
+				04F36474215FB134007A8D9A /* LoginViewController.swift in Sources */,
 				04F36488215FB1E4007A8D9A /* LoginInterfaces.swift in Sources */,
 				0480FD062160FA1C0036B685 /* ColorPaletterInteractor.swift in Sources */,
 				04F364A1215FCB6A007A8D9A /* LoginResponseModel.swift in Sources */,
 				04F3649D215FB8A3007A8D9A /* WebServiceProvider.swift in Sources */,
 				04F36498215FB7AA007A8D9A /* WebServiceInterface.swift in Sources */,
+				04E061782163B5D9004F41BD /* DependencyInjection.swift in Sources */,
 				04F3649B215FB817007A8D9A /* ServiceRequest.swift in Sources */,
 				04F3648E215FB555007A8D9A /* LoginInteractor.swift in Sources */,
 				0480FD022160F83F0036B685 /* ColorPaletteModel.swift in Sources */,
